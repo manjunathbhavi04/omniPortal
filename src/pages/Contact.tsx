@@ -74,19 +74,19 @@ const Contact = () => {
     {
       icon: <Twitter className="h-5 w-5" />,
       label: 'Twitter',
-      href: 'https://twitter.com',
+      href: 'https://x.com/OmnniPortaL',
       color: 'bg-[#1DA1F2]/10 text-[#1DA1F2]',
     },
     {
       icon: <Github className="h-5 w-5" />,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/manjunathbhavi04/omniPortal.git',
       color: 'bg-[#333]/10 text-white',
     },
     {
       icon: <MessageSquare className="h-5 w-5" />,
       label: 'Discord',
-      href: 'https://discord.com',
+      href: 'https://discord.gg/VkWxqp5b',
       color: 'bg-[#5865F2]/10 text-[#5865F2]',
     },
     {
