@@ -1,0 +1,175 @@
+import { Chain, Token, Transaction, NFT } from '../types';
+
+export const supportedChains: Chain[] = [
+  {
+    id: 'solana',
+    name: 'Solana',
+    icon: 'https://cryptologos.cc/logos/solana-sol-logo.png',
+    status: 'active',
+    nativeToken: 'SOL',
+    tokenSymbol: 'SOL',
+  },
+  {
+    id: 'ethereum',
+    name: 'Ethereum',
+    icon: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+    status: 'active',
+    nativeToken: 'Ether',
+    tokenSymbol: 'ETH',
+  },
+  {
+    id: 'bnb',
+    name: 'BNB Chain',
+    icon: 'https://cryptologos.cc/logos/bnb-bnb-logo.png',
+    status: 'active',
+    nativeToken: 'BNB',
+    tokenSymbol: 'BNB',
+  },
+  {
+    id: 'avalanche',
+    name: 'Avalanche',
+    icon: 'https://cryptologos.cc/logos/avalanche-avax-logo.png',
+    status: 'congested',
+    nativeToken: 'AVAX',
+    tokenSymbol: 'AVAX',
+  },
+  {
+    id: 'polygon',
+    name: 'Polygon',
+    icon: 'https://cryptologos.cc/logos/polygon-matic-logo.png',
+    status: 'active',
+    nativeToken: 'MATIC',
+    tokenSymbol: 'MATIC',
+  },
+  {
+    id: 'arbitrum',
+    name: 'Arbitrum',
+    icon: 'https://cryptologos.cc/logos/arbitrum-arb-logo.png',
+    status: 'inactive',
+    nativeToken: 'ETH',
+    tokenSymbol: 'ETH',
+  },
+];
+
+export const tokens: Token[] = [
+  {
+    symbol: 'SOL',
+    name: 'Solana',
+    icon: 'https://cryptologos.cc/logos/solana-sol-logo.png',
+    balance: '12.45',
+    usdValue: 1245.00,
+    chain: 'solana',
+  },
+  {
+    symbol: 'ETH',
+    name: 'Ethereum',
+    icon: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+    balance: '0.56',
+    usdValue: 1120.00,
+    chain: 'ethereum',
+  },
+  {
+    symbol: 'USDC',
+    name: 'USD Coin',
+    icon: 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png',
+    balance: '756.23',
+    usdValue: 756.23,
+    chain: 'solana',
+  },
+  {
+    symbol: 'BNB',
+    name: 'BNB',
+    icon: 'https://cryptologos.cc/logos/bnb-bnb-logo.png',
+    balance: '2.34',
+    usdValue: 586.44,
+    chain: 'bnb',
+  },
+  {
+    symbol: 'AVAX',
+    name: 'Avalanche',
+    icon: 'https://cryptologos.cc/logos/avalanche-avax-logo.png',
+    balance: '15.78',
+    usdValue: 236.70,
+    chain: 'avalanche',
+  },
+];
+
+export const nfts: NFT[] = [
+  {
+    id: 'nft1',
+    name: 'Cosmic Voyager #428',
+    image: 'https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg',
+    collection: 'Cosmic Voyagers',
+    chain: 'solana',
+  },
+  {
+    id: 'nft2',
+    name: 'NeonPunk #1337',
+    image: 'https://images.pexels.com/photos/3052721/pexels-photo-3052721.jpeg',
+    collection: 'NeonPunks',
+    chain: 'ethereum',
+  },
+  {
+    id: 'nft3',
+    name: 'Digital Horizon #89',
+    image: 'https://images.pexels.com/photos/1820656/pexels-photo-1820656.jpeg',
+    collection: 'Digital Horizons',
+    chain: 'solana',
+  },
+];
+
+export const recentTransactions: Transaction[] = [
+  {
+    id: 'tx1',
+    type: 'bridge',
+    status: 'completed',
+    fromChain: 'solana',
+    toChain: 'ethereum',
+    token: 'USDC',
+    amount: '120.50',
+    timestamp: Date.now() - 1000 * 60 * 15,
+    hash: '0x1a2b3c4d5e6f7g8h9i0j...',
+  },
+  {
+    id: 'tx2',
+    type: 'receive',
+    status: 'completed',
+    fromChain: 'bnb',
+    toChain: 'solana',
+    token: 'USDT',
+    amount: '500.00',
+    timestamp: Date.now() - 1000 * 60 * 60 * 2,
+    hash: '5SDf7g8h9i0jKlMnOpQr...',
+  },
+  {
+    id: 'tx3',
+    type: 'send',
+    status: 'pending',
+    fromChain: 'solana',
+    toChain: 'arbitrum',
+    token: 'SOL',
+    amount: '1.25',
+    timestamp: Date.now() - 1000 * 60 * 30,
+    hash: '9i0jKlMnOpQrStUvWxYz...',
+  },
+  {
+    id: 'tx4',
+    type: 'bridge',
+    status: 'failed',
+    fromChain: 'ethereum',
+    toChain: 'polygon',
+    token: 'ETH',
+    amount: '0.1',
+    timestamp: Date.now() - 1000 * 60 * 60 * 12,
+    hash: 'KlMnOpQrStUvWxYz1a2b...',
+  },
+];
+
+export const gasEstimates = {
+  solana: '0.000005 SOL',
+  ethereum: '0.002 ETH',
+  bnb: '0.0005 BNB',
+  avalanche: '0.001 AVAX',
+  polygon: '0.0001 MATIC',
+  arbitrum: '0.0001 ETH',
+};
